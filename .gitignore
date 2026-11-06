@@ -1,0 +1,122 @@
+# ===================== 环境变量（含密钥，禁止提交） =====================
+.env
+.env.*
+!.env.example
+
+# ===================== Python（apps/api） =====================
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# 本地 SQLite 数据文件（pytest / 演示库，含数据，不提交）
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ===================== Node / 前端（apps/web） =====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+.next/
+.nuxt/
+.output/
+.vite/
+*.tsbuildinfo
+# 工具缓存 / 本地配置：.npmrc 可能含 registry token，不提交
+.npmrc
+.yarn/
+.parcel-cache/
+.turbo/
+.metro-health-check*
+coverage/
+
+# ===================== 移动端（apps/mobile） =====================
+# Expo CNG：ios/ 与 android/ 由 expo prebuild 生成，不提交
+.expo/
+.expo-shared/
+ios/
+android/
+.gradle/
+Pods/
+*.keystore
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+credentials.json
+# EAS / Expo 导出与安装包产物
+*.apk
+*.aab
+*.ipa
+*.hbc
+# Flutter（历史规划保留）
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+*.iml
+
+# ===================== 共享包（packages/api-schema） =====================
+# OpenAPI 源文件（openapi.yaml）需提交；以下为各端生成的客户端代码，忽略
+packages/api-schema/generated/
+
+# ===================== 密钥 / 证书（含私钥，禁止提交） =====================
+deploy/certs/
+deploy/certbot/
+# 通用私钥与证书文件（避免误把临时生成的密钥放进仓库）
+*.pem
+*.key
+*.crt
+*.cer
+*.csr
+*.pfx
+id_rsa*
+
+# ===================== 运行/构建产物与数据 =====================
+*.log
+logs/
+.data/
+*.sqlite3
+*.sqlite
+
+# ===================== 编辑器 / IDE / 系统 =====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+# IDE / AI 工具的本地数据：只做忽略，目录本身要保留，不要删除
+.codebuddy/
+.history/
+.cursor/
+.continue/
+*.code-workspace
+
+# ===================== 其他 =====================
+.cache/
+.temp/
+tmp/
+# 编辑器/脚本留下的备份与临时文件
+*.bak
+*.orig
+*~
+*.tmp
