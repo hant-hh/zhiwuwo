@@ -73,7 +73,7 @@ zhiwuwo/
 | 共享包 | `packages/api-schema/generated/` | 生成代码不提交 |
 | 密钥 / 证书 | `deploy/certs/`、`deploy/certbot/`、`*.pem`、`*.key`、`*.crt`、`*.pfx`、`id_rsa*` | 含私钥与 ACME 状态，禁止提交 |
 | 产物 / 日志 | `*.log`、`logs/`、`.data/`、`*.sqlite3`、`*.bak`、`*.tmp` | 运行期产物与备份文件 |
-| 系统 / IDE | `.DS_Store`、`.idea/`、`.vscode/`、`.codebuddy/`、`.history/`、`.cursor/` | IDE / AI 工具本地数据；**只忽略，不删除 `.codebuddy/`** |
+| 系统 / IDE | `.DS_Store`、`.idea/`、`.vscode/*`、`.codebuddy/`、`.history/`、`.cursor/` | IDE / AI 工具本地数据；`!.vscode/settings.json` 例外放行供团队共享；**只忽略，不删除 `.codebuddy/`** |
 
 ### 必须提交 / 必须忽略 对照
 - ✅ 提交：`requirements.txt`、`openapi.json` / `openapi.yaml`、`package-lock.json`、`packages/shared/src/`、各端源码与配置（`app.config.ts`、`eas.json`、nginx 配置）、`.env.example`、脚本

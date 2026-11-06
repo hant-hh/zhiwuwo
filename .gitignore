@@ -101,7 +101,9 @@ Thumbs.db
 *.swp
 *.swo
 .idea/
-.vscode/
+# .vscode 设置需团队共享；其余本地文件（launch/tasks 等）仍忽略
+.vscode/*
+!.vscode/settings.json
 *.sublime-project
 *.sublime-workspace
 # IDE / AI 工具的本地数据：只做忽略，目录本身要保留，不要删除
